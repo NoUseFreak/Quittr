@@ -12,6 +12,8 @@
     "clastic_backoffice": "./vendor/clastic/backoffice-bundle/bower.json",
     "clastic_menu": "./vendor/clastic/menu-bundle/bower.json",
     "clastic_alias": "./vendor/clastic/alias-bundle/bower.json",
-    "clastic_media": "./vendor/clastic/media-bundle/bower.json"
+    "clastic_media": "./vendor/clastic/media-bundle/bower.json",
+    "angular": "~1.3.14",
+    "angular-route": "~1.3.14"
   }
 }
