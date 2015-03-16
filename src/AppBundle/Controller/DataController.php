@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Project;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -26,5 +27,24 @@ class DataController extends Controller
             'title' => $record->getNode()->getTitle(),
             'content' => $record->getBody(),
         ));
+    }
+
+    /**
+     * @Route("/data/projects.json", name="data_projects")
+     */
+    public function projectsAction()
+    {
+        /** @var \Clastic\AliasBundle\Entity\Alias $alias */
+        $records = $this->getDoctrine()->getRepository('AppBundle:Project')->findAll();
+
+        $records = array_map(function(Project $item) {
+            return array(
+                'id' => $item->getNode()->getId(),
+                'title' => $item->getNode()->getTitle(),
+                'description' => $item->getDescription(),
+            );
+        }, $records);
+
+        return new JsonResponse($records);
     }
 }

@@ -1,8 +1,5 @@
-<?xml version="1.0" ?>
-
-<container xmlns="http://symfony.com/schema/dic/services"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+<?xml version="1.0"?>
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <!--
     <services>
@@ -13,4 +10,4 @@
         </service>
     </services>
     -->
-</container>
+<parameters><parameter key="app_bundle.project.module.class">AppBundle\Module\ProjectModule</parameter><parameter key="app_bundle.project.module.form_extension.class">AppBundle\Form\Module\ProjectFormExtension</parameter></parameters><services><service id="app_bundle.project.module" class="%app_bundle.project.module.class%"><tag name="clastic.module" node_module="true" alias="project"/><tag name="clastic.node_form" build_service="app_bundle.project.module.form_extension"/></service><service id="app_bundle.project.module.form_extension" class="%app_bundle.project.module.form_extension.class%"/></services></container>
