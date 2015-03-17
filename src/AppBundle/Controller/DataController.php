@@ -45,6 +45,14 @@ class DataController extends Controller
             );
         }, $records);
 
+        for ($i = 0; $i < 70; $i++) {
+            $records[] = array(
+                'id' => $records[0]['id'],
+                'title' => $records[0]['title'] . ' = ' . $i,
+                'description' => $records[0]['description'],
+            );
+        }
+
         return new JsonResponse($records);
     }
 }

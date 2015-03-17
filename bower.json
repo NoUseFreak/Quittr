@@ -14,6 +14,10 @@
     "clastic_alias": "./vendor/clastic/alias-bundle/bower.json",
     "clastic_media": "./vendor/clastic/media-bundle/bower.json",
     "angular": "~1.3.14",
-    "angular-route": "~1.3.14"
+    "angular-route": "~1.3.14",
+    "angular-ui-bootstrap": "~0.12.1"
+  },
+  "resolutions": {
+    "angular": "~1.3.14"
   }
 }
