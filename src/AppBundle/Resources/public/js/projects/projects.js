@@ -5,7 +5,7 @@ angular
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
             .when('/projects', {
-                templateUrl: 'pages/projects.html',
+                templateUrl: 'views/projects.html',
                 controller: 'ProjectsCtrl'
             });
     }])
@@ -15,4 +15,7 @@ angular
             .success(function(data) {
                 $scope.projects = data;
             });
+    }])
+    .controller('ControllerName', ['$scope', function($scope) {
+        $scope.test = 'sdfsdfsd';
     }]);

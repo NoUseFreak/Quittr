@@ -5,7 +5,7 @@ angular
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: 'pages/dashboard.html',
+                templateUrl: '/views/dashboard.html',
                 controller: 'DashboardCtrl'
             });
     }])

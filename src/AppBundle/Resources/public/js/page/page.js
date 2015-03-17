@@ -5,7 +5,7 @@ angular
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
             .when('/page/:page', {
-                templateUrl: 'pages/page.html',
+                templateUrl: 'views/page.html',
                 controller: 'PageCtrl'
             });
     }])
